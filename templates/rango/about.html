@@ -1,27 +1,20 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
 
-{% load staticfiles %} <!-- New line -->
+{% block title_block %}
+    {{ category.name }}
+{% endblock %}
 
-<html>
-
-   <head>
-      <title>Rango</title>
-   </head>
-
-   <body>
+{% block body_block %}
       <div>
         <p>This tutorial has been put together by David Stewart</p>
       </div>
       <div>
-         <a href="/rango/">Index</a><br />
          <img src="{% static "images/about.jpg" %}"
-             alt="About pic" /> <!-- New line -->
+             alt="About pic" />
       </div>
             <div>
-         <a href="/rango/">Index</a><br />
          <img src="{{ MEDIA_URL}}cat.jpg"
-             alt="Cat" /> <!-- New line -->
+             alt="Cat" /> 
       </div>
-   </body>
-
-</html>
+{% endblock %}
